@@ -352,6 +352,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* References */}
+      <section className="py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center">References</h2>
+          
+          <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 className="text-lg font-semibold mb-2">Professor Won-Jae Yi</h3>
+            <p className="text-cyan-400 mb-3">Associate Professor, Computer Engineering</p>
+            <p className="text-zinc-400 mb-4">Illinois Institute of Technology</p>
+            <div className="text-zinc-400 text-sm space-y-1">
+              <p>3303 South State Street, Chicago, IL 60616, USA</p>
+              <p>Email: <a href="mailto:wyi3@iit.edu" className="text-cyan-400 hover:underline">wyi3@iit.edu</a></p>
+              <p>Phone: (312) 567-3327</p>
+              <p>Office: Seigel Hall 316</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-6 border-t border-zinc-800">
         <div className="max-w-5xl mx-auto px-6 text-center text-zinc-500 text-sm">
