@@ -25,8 +25,8 @@ export default function Home() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-zinc-950/90 backdrop-blur border-b border-zinc-800" : ""}`}>
         <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
           <span className="text-xl font-semibold">
-            <span className="text-white">Jishnu </span>
-            <span className="text-cyan-400">Janardanan</span>
+            <span className="text-cyan-400">JJ</span>
+            <span className="text-zinc-500">30</span>
           </span>
           <div className="hidden md:flex gap-8">
             {["Home", "About", "Experience", "Projects", "Contact"].map((item) => (
@@ -348,7 +348,7 @@ export default function Home() {
               </svg>
               <div>
                 <p className="font-medium">Location</p>
-                <p className="text-zinc-400">U.S.A (Authorized to Work)</p>
+                <p className="text-zinc-400">Chicago, IL, U.S.A (Authorized to Work)</p>
               </div>
             </div>
           </div>
