@@ -95,7 +95,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
               <p className="text-zinc-400 mb-4">
-                I am a Computer Engineering student at Illinois Institute of Technology, graduating December 2025. 
+                I am a Computer Engineering student at Illinois Institute of Technology, recently graduated in December 2025. 
                 I like building things that work well and look good.
               </p>
               <p className="text-zinc-400">
