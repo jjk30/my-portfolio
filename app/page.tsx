@@ -192,7 +192,6 @@ export default function Home() {
                   { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
                   { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
                   { name: "Linux/Ubuntu", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
-                  { name: "OpenMP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opengl/opengl-original.svg" },
                   { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
                 ].map((skill) => (
                   <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
@@ -218,6 +217,26 @@ export default function Home() {
                       <path d="M9 2v2H7v2H5v2H3v8h2v2h2v2h2v2h6v-2h2v-2h2v-2h2V8h-2V6h-2V4h-2V2H9zm0 2h6v2h2v2h2v8h-2v2h-2v2H9v-2H7v-2H5V8h2V6h2V4zm1 4v2h4v2h-4v2h4v2h-4v2h4v-2h2v-2h-2v-2h2v-2h-2V8h-4z"/>
                     </svg>
                     <span>{skill}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* AI/ML & Performance */}
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 md:col-span-2">
+              <h3 className="text-lg font-semibold mb-4">AI/ML & Performance</h3>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+                  { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+                  { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+                  { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+                  { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+                  { name: "OpenMP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+                ].map((skill) => (
+                  <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
+                    <img src={skill.icon} alt={skill.name} className="w-5 h-5" />
+                    <span>{skill.name}</span>
                   </span>
                 ))}
               </div>
