@@ -291,7 +291,7 @@ export default function Home() {
                 title: "SneakersForLess",
                 desc: "Sneaker price comparison site. React frontend with Firebase auth, serverless AWS backend.",
                 tech: ["React", "AWS Lambda", "DynamoDB"],
-                link: "https://sneakersforless.org",
+                link: "https://www.sneakersforless.org",
                 live: true,
               },
               {
