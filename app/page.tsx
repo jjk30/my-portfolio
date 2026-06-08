@@ -395,17 +395,22 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-8">References</h2>
           
-          <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <a
+            href="https://www.iit.edu/directory/people/won-jae-yi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-400"
+          >
             <h3 className="text-lg font-semibold mb-2">Professor Won-Jae Yi</h3>
-            <p className="text-cyan-400 mb-3">Associate Professor, Computer Engineering</p>
+            <p className="text-cyan-400 mb-3">Associate Teaching Professor of Electrical and Computer Engineering</p>
             <p className="text-zinc-400 mb-4">Illinois Institute of Technology</p>
             <div className="text-zinc-400 text-sm space-y-1">
               <p>3301 S Dearborn St, Chicago, IL 60616</p>
-              <p>Email: <a href="mailto:wyi3@iit.edu" className="text-cyan-400 hover:underline">wyi3@iit.edu</a></p>
+              <p>Email: wyi3@iit.edu</p>
               <p>Phone: (312) 567-3327</p>
               <p>Office: Seigel Hall 316</p>
             </div>
-          </div>
+          </a>
         </div>
       </section>
 
