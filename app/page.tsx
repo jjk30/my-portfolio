@@ -2,6 +2,22 @@
 
 import { useState, useEffect } from "react";
 
+function GithubIcon({ href }: { href: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="View source on GitHub"
+      className="text-gray-400 hover:text-white transition-colors"
+    >
+      <svg viewBox="0 0 16 16" fill="currentColor" className="w-6 h-6" aria-hidden="true">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+      </svg>
+    </a>
+  );
+}
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
@@ -292,6 +308,7 @@ export default function Home() {
                 desc: "Sneaker price comparison site. React frontend with Firebase auth, serverless AWS backend.",
                 tech: ["React", "AWS Lambda", "DynamoDB"],
                 link: "https://www.sneakersforless.org",
+                github: "https://github.com/jjk30/sneakers-for-less",
                 live: true,
               },
               {
@@ -299,13 +316,24 @@ export default function Home() {
                 desc: "Fitness app for seniors with workout plans and nutrition tracking.",
                 tech: ["React", "AWS Lambda", "CloudFront"],
                 link: "https://oldisgold.fit",
+                github: "https://github.com/jjk30/old-is-gold",
                 live: true,
+              },
+              {
+                // TODO: edit desc and tech to match what you actually built
+                title: "Chatbot using AWS Bedrock",
+                desc: "Conversational chatbot built on AWS Bedrock foundation models, with a serverless Lambda backend.",
+                tech: ["AWS Bedrock", "Python", "Lambda"],
+                link: null,
+                github: "https://github.com/jjk30/bedrock-chatbot",
+                live: false,
               },
               {
                 title: "CTA Database System",
                 desc: "Relational database with 6-8 entities, Python CRUD app with complex SQL queries and OLAP analytics.",
                 tech: ["Python", "SQL", "MySQL", "PostgreSQL"],
                 link: null,
+                github: null,
                 live: false,
               },
               {
@@ -313,6 +341,7 @@ export default function Home() {
                 desc: "Optimized C++ inference engine using OpenMP parallelization. Achieved 97.5% accuracy on MNIST.",
                 tech: ["C++", "OpenMP", "MNIST"],
                 link: null,
+                github: null,
                 live: false,
               },
               {
@@ -320,6 +349,7 @@ export default function Home() {
                 desc: "Matrix and tensor operations in C++ for the EasyNN framework with automated validation.",
                 tech: ["C++", "Python"],
                 link: null,
+                github: null,
                 live: false,
               },
               {
@@ -327,6 +357,7 @@ export default function Home() {
                 desc: "Custom RISC processor based on MIPS ISA with modular ALU and pipeline synchronization.",
                 tech: ["VHDL", "Verilog", "Synopsys DC"],
                 link: null,
+                github: null,
                 live: false,
               },
             ].map((project) => (
@@ -343,10 +374,15 @@ export default function Home() {
                     <span key={t} className="text-xs px-2 py-1 bg-zinc-800 rounded text-zinc-400">{t}</span>
                   ))}
                 </div>
-                {project.link && (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm hover:underline">
-                    Visit Site →
-                  </a>
+                {(project.link || project.github) && (
+                  <div className="flex items-center gap-4">
+                    {project.link && (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm hover:underline">
+                        Visit Site →
+                      </a>
+                    )}
+                    {project.github && <GithubIcon href={project.github} />}
+                  </div>
                 )}
               </div>
             ))}
