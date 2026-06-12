@@ -82,7 +82,7 @@ export default function Home() {
                 Janardanan
               </span>
             </h1>
-            <p className="text-xl text-zinc-300 mb-4">Software Engineer | B.S. in Computer Engineering at Illinois Institute of Technology</p>
+            <p className="text-xl text-zinc-300 mb-4">Software Engineer | B.S. in Computer Engineering from Illinois Institute of Technology</p>
             <p className="text-zinc-500 mb-8 max-w-md">
               Building scalable web applications with React and AWS. Passionate about clean code and delivering great user experiences.
             </p>
@@ -113,7 +113,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
               <p className="text-zinc-400 mb-4">
-                I am a Computer Engineering student at Illinois Institute of Technology, recently graduated in December 2025. 
+                I am a Computer Engineering student at Illinois Institute of Technology, graduated in May 2026. 
                 I like building things that work well and look good.
               </p>
               <p className="text-zinc-400">
@@ -125,7 +125,7 @@ export default function Home() {
               <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
                 <p className="font-medium">B.S. Computer Engineering</p>
                 <p className="text-cyan-400">Illinois Institute of Technology</p>
-                <p className="text-zinc-500 text-sm mt-1">Dec 2025</p>
+                <p className="text-zinc-500 text-sm mt-1">May 2026</p>
               </div>
             </div>
           </div>
@@ -137,30 +137,13 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-4">Languages</h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
-                  { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-                  { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
                   { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+                  { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
                   { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-                  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-                  { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-                ].map((skill) => (
-                  <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
-                    <img src={skill.icon} alt={skill.name} className="w-5 h-5" />
-                    <span>{skill.name}</span>
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Frontend */}
-            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
-              <h3 className="text-lg font-semibold mb-4">Frontend Development</h3>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-                  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-                  { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+                  { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+                  { name: "Dart", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" },
+                  { name: "Bash", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" },
+                  { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg" },
                   { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
                   { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
                 ].map((skill) => (
@@ -172,24 +155,38 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Backend & Cloud */}
+            {/* Frameworks & Libraries */}
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
-              <h3 className="text-lg font-semibold mb-4">Backend & Cloud</h3>
+              <h3 className="text-lg font-semibold mb-4">Frameworks & Libraries</h3>
               <div className="flex flex-wrap gap-3">
                 {[
+                  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+                  { name: "Vite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" },
+                  { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
+                  { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
                   { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-                  { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
-                  { name: "Lambda", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
-                  { name: "DynamoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dynamodb/dynamodb-original.svg" },
+                  { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+                  { name: "JUnit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/junit/junit-original.svg" },
+                  { name: "OpenMP", icon: null },
+                ].map((skill) => (
+                  <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
+                    {skill.icon && <img src={skill.icon} alt={skill.name} className="w-5 h-5" />}
+                    <span>{skill.name}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Databases */}
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+              <h3 className="text-lg font-semibold mb-4">Databases</h3>
+              <div className="flex flex-wrap gap-3">
+                {[
                   { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
                   { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-                  { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+                  { name: "DynamoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dynamodb/dynamodb-original.svg" },
                   { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
-                  { name: "Kafka", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" },
-                  { name: "RabbitMQ", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg" },
-                  { name: "GraphQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" },
-                  { name: "RDS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
-                  { name: "REST APIs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
+                  { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" },
                 ].map((skill) => (
                   <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
                     <img src={skill.icon} alt={skill.name} className="w-5 h-5" />
@@ -199,20 +196,43 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Tools & DevOps */}
+            {/* Cloud & DevOps */}
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
-              <h3 className="text-lg font-semibold mb-4">Tools & DevOps</h3>
+              <h3 className="text-lg font-semibold mb-4">Cloud & DevOps</h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+                  { name: "AWS (Lambda, EC2, API Gateway, S3, CloudFront, SES, EventBridge, IAM, Bedrock)", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+                  { name: "GCP (YouTube API, Firebase Auth)", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
                   { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-                  { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-                  { name: "Linux/Ubuntu", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
-                  { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+                  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+                  { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" },
+                  { name: "Linux/Ubuntu", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-original.svg" },
+                  { name: "MQTT", icon: null },
                 ].map((skill) => (
                   <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
-                    <img src={skill.icon} alt={skill.name} className="w-5 h-5" />
+                    {skill.icon && <img src={skill.icon} alt={skill.name} className="w-5 h-5" />}
                     <span>{skill.name}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Distributed Systems & System Design */}
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 md:col-span-2">
+              <h3 className="text-lg font-semibold mb-4">Distributed Systems & System Design</h3>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Caching Strategies",
+                  "Message Queues (Pub/Sub)",
+                  "Sharding & Replication",
+                  "Load Balancing",
+                  "Microservices",
+                  "Rate Limiting",
+                  "Idempotency",
+                  "Fault Tolerance",
+                ].map((skill) => (
+                  <span key={skill} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
+                    <span>{skill}</span>
                   </span>
                 ))}
               </div>
@@ -243,16 +263,13 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-4">AI/ML & Performance</h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
-                  { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-                  { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
-                  { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
-                  { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
-                  { name: "OpenMP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+                  "Neural Network Design (MLP, CNN)",
+                  "Tensor Optimization (NCHW/NHWC)",
+                  "OpenMP Parallelization",
+                  "Cache Optimization",
                 ].map((skill) => (
-                  <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
-                    <img src={skill.icon} alt={skill.name} className="w-5 h-5" />
-                    <span>{skill.name}</span>
+                  <span key={skill} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
+                    <span>{skill}</span>
                   </span>
                 ))}
               </div>
@@ -305,19 +322,59 @@ export default function Home() {
             {[
               {
                 title: "SneakersForLess",
-                desc: "Sneaker price comparison site. React frontend with Firebase auth, serverless AWS backend.",
-                tech: ["React", "AWS Lambda", "DynamoDB"],
+                desc: "Price comparison engine ranking sneaker quotes across 25+ retailers. Firebase-authenticated serverless backend with automated price alerts via EventBridge and SES.",
+                tech: ["React", "AWS Lambda", "DynamoDB", "Firebase", "Docker"],
                 link: "https://www.sneakersforless.org",
                 github: "https://github.com/jjk30/sneakers-for-less",
                 live: true,
               },
               {
                 title: "Old Is Gold",
-                desc: "Fitness app for seniors with workout plans and nutrition tracking.",
-                tech: ["React", "AWS Lambda", "CloudFront"],
+                desc: "Fitness platform for users 55+ with personalized workout plans, nutrition tracking, and sub-200ms dashboard loads via single-partition DynamoDB design. JWT auth with per-user rate limiting.",
+                tech: ["JavaScript", "AWS Lambda", "DynamoDB"],
                 link: "https://oldisgold.fit",
                 github: "https://github.com/jjk30/old-is-gold",
                 live: true,
+              },
+              {
+                title: "IoT Smart Device Hub",
+                desc: "Spring Boot device management backend syncing state in real time across HTTP and MQTT using pub/sub and the observer pattern. 94% test coverage with 30+ JUnit tests.",
+                tech: ["Java", "Spring Boot", "MQTT", "JUnit"],
+                link: null,
+                github: null,
+                live: false,
+              },
+              {
+                title: "Neural Network Inference Engine",
+                desc: "C++ engine running MLP and CNN models end-to-end. 97.5% MNIST accuracy, 8% cache hit rate gain from NCHW/NHWC tensor layout optimization, parallelized with OpenMP.",
+                tech: ["C++", "OpenMP", "MNIST"],
+                link: null,
+                github: null,
+                live: false,
+              },
+              {
+                title: "ThinkFast Embedded Trivia Game",
+                desc: "Raspberry Pi + Arduino trivia system over UART serial with sub-100ms LED feedback. Co-authored paper under review at IEEE EIT 2026.",
+                tech: ["Python", "Raspberry Pi", "Arduino"],
+                link: null,
+                github: null,
+                live: false,
+              },
+              {
+                title: "CTA Database System",
+                desc: "Relational database with 6-8 entities, Python CRUD app with complex SQL queries, window functions, and OLAP analytics.",
+                tech: ["Python", "SQL", "MySQL", "PostgreSQL"],
+                link: null,
+                github: null,
+                live: false,
+              },
+              {
+                title: "32-bit Pipelined CPU",
+                desc: "Custom RISC processor based on MIPS ISA with modular ALU and pipeline synchronization.",
+                tech: ["VHDL", "Verilog", "Synopsys DC"],
+                link: null,
+                github: null,
+                live: false,
               },
               {
                 // TODO: edit desc and tech to match what you actually built
@@ -329,33 +386,9 @@ export default function Home() {
                 live: false,
               },
               {
-                title: "CTA Database System",
-                desc: "Relational database with 6-8 entities, Python CRUD app with complex SQL queries and OLAP analytics.",
-                tech: ["Python", "SQL", "MySQL", "PostgreSQL"],
-                link: null,
-                github: null,
-                live: false,
-              },
-              {
-                title: "Neural Network Engine",
-                desc: "Optimized C++ inference engine using OpenMP parallelization. Achieved 97.5% accuracy on MNIST.",
-                tech: ["C++", "OpenMP", "MNIST"],
-                link: null,
-                github: null,
-                live: false,
-              },
-              {
                 title: "EasyNN Matrix Operations",
                 desc: "Matrix and tensor operations in C++ for the EasyNN framework with automated validation.",
                 tech: ["C++", "Python"],
-                link: null,
-                github: null,
-                live: false,
-              },
-              {
-                title: "32-bit Pipelined CPU",
-                desc: "Custom RISC processor based on MIPS ISA with modular ALU and pipeline synchronization.",
-                tech: ["VHDL", "Verilog", "Synopsys DC"],
                 link: null,
                 github: null,
                 live: false,
