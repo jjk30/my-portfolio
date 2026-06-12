@@ -113,11 +113,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
               <p className="text-zinc-400 mb-4">
-                I am a Computer Engineering student at Illinois Institute of Technology, graduated in May 2026. 
+                I am a Computer Engineering student from Illinois Institute of Technology, graduated in May 2026. 
                 I like building things that work well and look good.
               </p>
               <p className="text-zinc-400">
-                When I am not coding, you will find me watching cricket, playing basketball, or checking out new sneaker drops.
+                When I am not coding or designing systems, you will find me watching cricket, playing basketball, or checking out new sneaker drops.
               </p>
             </div>
             <div>
