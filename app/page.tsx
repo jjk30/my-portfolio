@@ -54,6 +54,14 @@ export default function Home() {
                 {item}
               </button>
             ))}
+            <a
+              href="/Jishnu_Janardanan_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-zinc-400 hover:text-white transition-colors"
+            >
+              Resume
+            </a>
           </div>
         </div>
       </nav>
@@ -94,12 +102,11 @@ export default function Home() {
                 Get in Touch
               </button>
               <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/Jishnu_Janardanan_Resume.pdf"
+                download="Jishnu_Janardanan_Resume.pdf"
                 className="px-5 py-2.5 border border-zinc-700 hover:border-zinc-500 rounded-lg font-medium transition-colors"
               >
-                Resume
+                Download Resume
               </a>
             </div>
           </div>
