@@ -92,7 +92,7 @@ export default function Home() {
             </h1>
             <p className="text-xl text-zinc-300 mb-4">Software Engineer | B.S. in Computer Engineering from Illinois Institute of Technology</p>
             <p className="text-zinc-500 mb-8 max-w-md">
-              Building scalable web applications with React and AWS. Passionate about clean code and delivering great user experiences.
+              Building scalable applications with React and AWS. Passionate about clean code and delivering great user experiences.
             </p>
             <div className="flex gap-4">
               <button
