@@ -45,7 +45,7 @@ export default function Home() {
             <span className="text-zinc-500">30</span>
           </span>
           <div className="hidden md:flex gap-8">
-            {["Home", "About", "Experience", "Projects", "Contact"].map((item) => (
+            {["Home", "About", "Experience", "Projects", "Certifications", "Contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollTo(item.toLowerCase())}
@@ -281,6 +281,63 @@ export default function Home() {
                 ))}
               </div>
             </div>
+
+            {/* AI-Assisted Development */}
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 md:col-span-2">
+              <h3 className="text-lg font-semibold mb-4">AI-Assisted Development</h3>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Prompt Engineering",
+                  "Claude Code",
+                  "Cursor",
+                  "AI-Native Workflows",
+                  "Anthropic API",
+                ].map((skill) => (
+                  <span key={skill} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
+                    <span>{skill}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section id="certifications" className="py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl font-bold mb-8">Certifications</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Claude 101",
+                issuer: "Anthropic Academy",
+                desc: "Foundational certification in AI-assisted workflows: prompt engineering and working effectively across Claude's feature set (Projects, Artifacts, Agent Skills, Connectors, Research).",
+                link: "https://verify.skilljar.com/c/n6t9irspjyr3",
+              },
+              {
+                title: "IBM Z Xplore",
+                issuer: "IBM",
+                desc: "Mainframe and enterprise systems fundamentals on IBM Z.",
+                // TODO: add IBM Z Xplore credential verification link
+                link: null,
+              },
+            ].map((cert) => (
+              <div key={cert.title} className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-lg font-medium">{cert.title}</h3>
+                </div>
+                <p className="text-cyan-400 text-sm mb-3">{cert.issuer}</p>
+                <p className="text-zinc-400 text-sm mb-4">{cert.desc}</p>
+                {cert.link && (
+                  <div className="flex items-center gap-4">
+                    <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm hover:underline">
+                      Verify Credential →
+                    </a>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
