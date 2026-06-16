@@ -315,6 +315,12 @@ export default function Home() {
                 desc: "Foundational certification in AI-assisted workflows: prompt engineering and working effectively across Claude's feature set (Projects, Artifacts, Agent Skills, Connectors, Research).",
                 link: "https://verify.skilljar.com/c/n6t9irspjyr3",
               },
+              {
+                title: "AI Fluency: Framework & Foundations",
+                issuer: "Anthropic Academy",
+                desc: "Framework for effective and responsible AI collaboration — task delegation, prompt engineering, critically evaluating AI outputs, and diligent, ethical use across the 4D model.",
+                link: "https://verify.skilljar.com/c/nockqxzrfhy4",
+              },
             ].map((cert) => (
               <div key={cert.title} className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors">
                 <div className="flex justify-between items-start mb-2">
