@@ -318,7 +318,7 @@ export default function Home() {
               {
                 title: "AI Fluency: Framework & Foundations",
                 issuer: "Anthropic Academy",
-                desc: "Framework for effective and responsible AI collaboration — task delegation, prompt engineering, critically evaluating AI outputs, and diligent, ethical use across the 4D model.",
+                desc: "Framework for effective and responsible AI collaboration, covering task delegation, prompt engineering, critically evaluating AI outputs, and diligent, ethical use across the 4D model.",
                 link: "https://verify.skilljar.com/c/nockqxzrfhy4",
               },
             ].map((cert) => (
