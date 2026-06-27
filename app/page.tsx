@@ -303,44 +303,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section id="certifications" className="py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-2xl font-bold mb-8">Certifications</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                title: "Claude 101",
-                issuer: "Anthropic Academy",
-                desc: "Foundational certification in AI-assisted workflows: prompt engineering and working effectively across Claude's feature set (Projects, Artifacts, Agent Skills, Connectors, Research).",
-                link: "https://verify.skilljar.com/c/n6t9irspjyr3",
-              },
-              {
-                title: "AI Fluency: Framework & Foundations",
-                issuer: "Anthropic Academy",
-                desc: "Framework for effective and responsible AI collaboration, covering task delegation, prompt engineering, critically evaluating AI outputs, and diligent, ethical use across the 4D model.",
-                link: "https://verify.skilljar.com/c/nockqxzrfhy4",
-              },
-            ].map((cert) => (
-              <div key={cert.title} className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-lg font-medium">{cert.title}</h3>
-                </div>
-                <p className="text-cyan-400 text-sm mb-3">{cert.issuer}</p>
-                <p className="text-zinc-400 text-sm mb-4">{cert.desc}</p>
-                {cert.link && (
-                  <div className="flex items-center gap-4">
-                    <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm hover:underline">
-                      Verify Credential →
-                    </a>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Experience */}
       <section id="experience" className="py-24 bg-zinc-900/30">
         <div className="max-w-5xl mx-auto px-6">
@@ -478,6 +440,44 @@ export default function Home() {
                       </a>
                     )}
                     {project.github && <GithubIcon href={project.github} />}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section id="certifications" className="py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl font-bold mb-8">Certifications</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Claude 101",
+                issuer: "Anthropic Academy",
+                desc: "Foundational certification in AI-assisted workflows: prompt engineering and working effectively across Claude's feature set (Projects, Artifacts, Agent Skills, Connectors, Research).",
+                link: "https://verify.skilljar.com/c/n6t9irspjyr3",
+              },
+              {
+                title: "AI Fluency: Framework & Foundations",
+                issuer: "Anthropic Academy",
+                desc: "Framework for effective and responsible AI collaboration, covering task delegation, prompt engineering, critically evaluating AI outputs, and diligent, ethical use across the 4D model.",
+                link: "https://verify.skilljar.com/c/nockqxzrfhy4",
+              },
+            ].map((cert) => (
+              <div key={cert.title} className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-lg font-medium">{cert.title}</h3>
+                </div>
+                <p className="text-cyan-400 text-sm mb-3">{cert.issuer}</p>
+                <p className="text-zinc-400 text-sm mb-4">{cert.desc}</p>
+                {cert.link && (
+                  <div className="flex items-center gap-4">
+                    <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm hover:underline">
+                      Verify Credential →
+                    </a>
                   </div>
                 )}
               </div>
