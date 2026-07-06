@@ -311,6 +311,17 @@ export default function Home() {
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
               <div className="flex flex-col md:flex-row md:justify-between mb-3">
                 <div>
+                  <h3 className="text-lg font-medium">Cloud Engineer</h3>
+                  <p className="text-cyan-400">Changing The Present</p>
+                </div>
+                <p className="text-zinc-500 text-sm">June 2026 - Present</p>
+              </div>
+              <ul className="space-y-2 text-zinc-400 text-sm">
+              </ul>
+            </div>
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+              <div className="flex flex-col md:flex-row md:justify-between mb-3">
+                <div>
                   <h3 className="text-lg font-medium">Backend Developer Intern</h3>
                   <p className="text-cyan-400">FoodCLUB</p>
                 </div>
