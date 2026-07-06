@@ -313,6 +313,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-lg font-medium">Cloud Engineer</h3>
                   <p className="text-cyan-400">Changing The Present</p>
+                  <p className="text-zinc-500 text-sm">New York, NY</p>
                 </div>
                 <p className="text-zinc-500 text-sm">June 2026 - Present</p>
               </div>
@@ -324,6 +325,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-lg font-medium">Backend Developer Intern</h3>
                   <p className="text-cyan-400">FoodCLUB</p>
+                  <p className="text-zinc-500 text-sm">London, United Kingdom</p>
                 </div>
                 <p className="text-zinc-500 text-sm">Jan - May 2024</p>
               </div>
@@ -338,6 +340,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-lg font-medium">Hardware Research</h3>
                   <p className="text-cyan-400">IIT Motorsports (FSAE)</p>
+                  <p className="text-zinc-500 text-sm">Chicago, IL</p>
                 </div>
                 <p className="text-zinc-500 text-sm">Jan - May 2024</p>
               </div>
