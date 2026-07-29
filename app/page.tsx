@@ -466,7 +466,7 @@ export default function Home() {
       <section id="certifications" className="py-24">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-8">Certifications</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Claude 101",
@@ -479,6 +479,12 @@ export default function Home() {
                 issuer: "Anthropic Academy",
                 desc: "Framework for effective and responsible AI collaboration, covering task delegation, prompt engineering, critically evaluating AI outputs, and diligent, ethical use across the 4D model.",
                 link: "https://verify.skilljar.com/c/nockqxzrfhy4",
+              },
+              {
+                title: "Building RAG Agents with LLMs",
+                issuer: "NVIDIA Deep Learning Institute",
+                desc: "Hands-on certification in retrieval-augmented generation: building LLM agents with vector stores, embedding-based retrieval, document ingestion pipelines, and multi-turn agent state management.",
+                link: "https://learn.nvidia.com/certificates?id=oM6CidNTQTObshUARsioPg",
               },
             ].map((cert) => (
               <div key={cert.title} className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors">
