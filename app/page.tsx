@@ -213,6 +213,7 @@ export default function Home() {
                   { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
                   { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
                   { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" },
+                  { name: "Bazel", icon: "/bazel.svg" },
                   { name: "Linux/Ubuntu", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-original.svg" },
                   { name: "MQTT", icon: null },
                 ].map((skill) => (
@@ -237,6 +238,8 @@ export default function Home() {
                   "Rate Limiting",
                   "Idempotency",
                   "Fault Tolerance",
+                  "Lock-Free Programming",
+                  "Multithreading",
                 ].map((skill) => (
                   <span key={skill} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
                     <span>{skill}</span>
