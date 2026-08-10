@@ -376,6 +376,15 @@ export default function Home() {
                 live: true,
               },
               {
+                title: "Low-Latency Trading Exchange (C++)",
+                desc: "Low-latency trading exchange built from scratch in modern C++ (C++26, Bazel). Matching engine with price-time priority, a pre-allocated memory pool, a lock-free MPSC queue, and a live market data feed with a client-side book rebuilder. Verified with 113 tests; a live run streamed 111,842 messages to 4 clients that each rebuilt an 8,235-order book from the feed alone with zero drops.",
+                tech: ["C++", "Bazel", "Multithreading", "Lock-Free", "GoogleTest"],
+                link: null,
+                github: "https://github.com/jjk30/cpp-trading-exchange",
+                certificate: "/build-fellowship-certificate.pdf",
+                live: false,
+              },
+              {
                 title: "IoT Smart Device Hub",
                 desc: "Spring Boot device management backend syncing state in real time across HTTP and MQTT using pub/sub and the observer pattern. 94% test coverage with 30+ JUnit tests.",
                 tech: ["Java", "Spring Boot", "MQTT", "JUnit"],
@@ -454,6 +463,11 @@ export default function Home() {
                       </a>
                     )}
                     {project.github && <GithubIcon href={project.github} />}
+                    {"certificate" in project && project.certificate && (
+                      <a href={project.certificate} download className="text-cyan-400 text-sm hover:underline">
+                        Certificate ↓
+                      </a>
+                    )}
                   </div>
                 )}
               </div>
