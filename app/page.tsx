@@ -498,6 +498,12 @@ export default function Home() {
                 link: "https://verify.skilljar.com/c/7uyuyusufw5k",
               },
               {
+                title: "Introduction to Model Context Protocol",
+                issuer: "Anthropic Academy",
+                desc: "Certification in the Model Context Protocol (MCP): connecting LLMs to external tools and data sources through standardized servers, enabling agents to access live context and act across systems.",
+                link: "https://verify.skilljar.com/c/5v7unsrt4hef",
+              },
+              {
                 title: "AI Fluency: Framework & Foundations",
                 issuer: "Anthropic Academy",
                 desc: "Framework for effective and responsible AI collaboration, covering task delegation, prompt engineering, critically evaluating AI outputs, and diligent, ethical use across the 4D model.",
