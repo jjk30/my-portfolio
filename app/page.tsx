@@ -483,13 +483,19 @@ export default function Home() {
       <section id="certifications" className="py-24">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-8">Certifications</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Claude 101",
                 issuer: "Anthropic Academy",
                 desc: "Foundational certification in AI-assisted workflows: prompt engineering and working effectively across Claude's feature set (Projects, Artifacts, Agent Skills, Connectors, Research).",
                 link: "https://verify.skilljar.com/c/n6t9irspjyr3",
+              },
+              {
+                title: "Claude Code 101",
+                issuer: "Anthropic Academy",
+                desc: "Foundational certification in agentic coding with Claude Code: driving development from the terminal, delegating multi-step engineering tasks, and integrating AI-native workflows into a real codebase.",
+                link: "https://verify.skilljar.com/c/7uyuyusufw5k",
               },
               {
                 title: "AI Fluency: Framework & Foundations",
