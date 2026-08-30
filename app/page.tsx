@@ -483,8 +483,36 @@ export default function Home() {
       <section id="certifications" className="py-24">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-8">Certifications</h2>
+          {/* Featured certification */}
+          <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors flex flex-col md:flex-row items-center gap-8 mb-6 text-center md:text-left">
+            <img
+              src="/nvidia-agentic-ai-professional.png"
+              alt="NVIDIA Certified Professional: Agentic AI badge"
+              className="w-[150px] h-[150px] flex-shrink-0"
+            />
+            <div>
+              <h3 className="text-xl font-medium mb-2">NVIDIA Certified Professional: Agentic AI</h3>
+              <a href="https://www.credly.com/badges/859ccdbe-2269-4036-8909-e3137afe1502/public_url" target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm mb-3 inline-block hover:underline">NVIDIA</a>
+              <p className="text-zinc-400 text-sm mb-4">Intermediate-level professional certification validating the ability to architect, develop, deploy, and govern advanced agentic AI systems — spanning agent architecture, cognition and memory, multi-agent orchestration, evaluation and tuning, and deployment at scale on NVIDIA platforms.</p>
+              <a href="https://www.credly.com/badges/859ccdbe-2269-4036-8909-e3137afe1502/public_url" target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm hover:underline">
+                Verify Credential →
+              </a>
+            </div>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              {
+                title: "Building RAG Agents with LLMs",
+                issuer: "NVIDIA Deep Learning Institute",
+                desc: "Hands-on certification in retrieval-augmented generation: building LLM agents with vector stores, embedding-based retrieval, document ingestion pipelines, and multi-turn agent state management.",
+                link: "https://learn.nvidia.com/certificates?id=oM6CidNTQTObshUARsioPg",
+              },
+              {
+                title: "Building Agentic AI Applications with Large Language Models",
+                issuer: "NVIDIA Deep Learning Institute",
+                desc: "Hands-on certification in agent architectures: structured outputs and function calling, retrieval and knowledge graphs, and multi-agent orchestration with LangGraph and NVIDIA NIM for long-horizon reasoning and real-time operation at scale.",
+                link: "https://learn.nvidia.com/certificates?id=X-lO2ywER9eDObMk82OKVw",
+              },
               {
                 title: "Claude 101",
                 issuer: "Anthropic Academy",
@@ -508,18 +536,6 @@ export default function Home() {
                 issuer: "Anthropic Academy",
                 desc: "Framework for effective and responsible AI collaboration, covering task delegation, prompt engineering, critically evaluating AI outputs, and diligent, ethical use across the 4D model.",
                 link: "https://verify.skilljar.com/c/nockqxzrfhy4",
-              },
-              {
-                title: "Building RAG Agents with LLMs",
-                issuer: "NVIDIA Deep Learning Institute",
-                desc: "Hands-on certification in retrieval-augmented generation: building LLM agents with vector stores, embedding-based retrieval, document ingestion pipelines, and multi-turn agent state management.",
-                link: "https://learn.nvidia.com/certificates?id=oM6CidNTQTObshUARsioPg",
-              },
-              {
-                title: "Building Agentic AI Applications with Large Language Models",
-                issuer: "NVIDIA Deep Learning Institute",
-                desc: "Hands-on certification in agent architectures: structured outputs and function calling, retrieval and knowledge graphs, and multi-agent orchestration with LangGraph and NVIDIA NIM for long-horizon reasoning and real-time operation at scale.",
-                link: "https://learn.nvidia.com/certificates?id=X-lO2ywER9eDObMk82OKVw",
               },
             ].map((cert) => (
               <div key={cert.title} className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors">
