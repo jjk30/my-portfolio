@@ -493,7 +493,7 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-medium mb-2">NVIDIA Certified Professional: Agentic AI</h3>
               <a href="https://www.credly.com/badges/859ccdbe-2269-4036-8909-e3137afe1502/public_url" target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm mb-3 inline-block hover:underline">NVIDIA</a>
-              <p className="text-zinc-400 text-sm mb-4">Intermediate-level professional certification validating the ability to architect, develop, deploy, and govern advanced agentic AI systems — spanning agent architecture, cognition and memory, multi-agent orchestration, evaluation and tuning, and deployment at scale on NVIDIA platforms.</p>
+              <p className="text-zinc-400 text-sm mb-4">Professional certification validating the ability to architect, develop, deploy, and govern advanced agentic AI systems, spanning agent architecture, cognition and memory, multi-agent orchestration, evaluation and tuning, and deployment at scale on NVIDIA platforms.</p>
               <a href="https://www.credly.com/badges/859ccdbe-2269-4036-8909-e3137afe1502/public_url" target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm hover:underline">
                 Verify Credential →
               </a>
