@@ -347,14 +347,23 @@ export default function Home() {
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
               <div className="flex flex-col md:flex-row md:justify-between mb-3">
                 <div>
-                  <h3 className="text-lg font-medium">Cloud Engineer</h3>
+                  <h3 className="text-lg font-medium">Cloud Engineer (Project Manager)</h3>
                   <p className="text-cyan-400">Changing The Present</p>
-                  <p className="text-zinc-500 text-sm">New York, NY</p>
+                  <p className="text-zinc-500 text-sm">New York, NY · Remote</p>
                 </div>
-                <p className="text-zinc-500 text-sm">June 2026 - Present</p>
+                <p className="text-zinc-500 text-sm whitespace-nowrap md:ml-4 md:text-right shrink-0">June 2026 - Present</p>
               </div>
               <ul className="space-y-2 text-zinc-400 text-sm">
+                <li>• Audited a 23-table PostgreSQL database with Python (pandas) and pgAdmin, uncovering that 31% of applicants were silently dropped and 26% of tables were dead.</li>
+                <li>• Moved the Postgres superuser password out of plain-text config into AWS Secrets Manager and gave each service its own read-only role, with zero downtime during the cutover.</li>
+                <li>• Designed a BCNF schema and a re-runnable ETL sync (Python, AWS Lambda, EventBridge, VPC), cutting data lag from 5 months to 1 hour (99.9%).</li>
+                <li>• Led the team through written briefs and clear task delegation to ship a Google Sheets-to-Postgres ETL pipeline.</li>
               </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {["Python", "pandas", "PostgreSQL", "AWS Lambda", "EventBridge", "Secrets Manager", "VPC"].map((t) => (
+                  <span key={t} className="text-xs px-2 py-1 bg-zinc-800 rounded text-zinc-400">{t}</span>
+                ))}
+              </div>
             </div>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
               <div className="flex flex-col md:flex-row md:justify-between mb-3">
@@ -363,13 +372,17 @@ export default function Home() {
                   <p className="text-cyan-400">FoodCLUB</p>
                   <p className="text-zinc-500 text-sm">London, United Kingdom</p>
                 </div>
-                <p className="text-zinc-500 text-sm">Jan - May 2024</p>
+                <p className="text-zinc-500 text-sm whitespace-nowrap md:ml-4 md:text-right shrink-0">Jan - May 2024</p>
               </div>
               <ul className="space-y-2 text-zinc-400 text-sm">
-                <li>• Built Node.js backend services on AWS EC2, handling 100+ API requests daily</li>
-                <li>• Developed REST APIs for auth and data retrieval, cut response times by 30%</li>
-                <li>• Worked in Agile sprints with Git and bi-weekly releases</li>
+                <li>• Held authentication and data APIs at 99% uptime by building and maintaining Node.js services on AWS EC2.</li>
+                <li>• Cut response latency 30% on the busiest endpoints by adding Redis caching.</li>
               </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {["Node.js", "AWS EC2", "Redis"].map((t) => (
+                  <span key={t} className="text-xs px-2 py-1 bg-zinc-800 rounded text-zinc-400">{t}</span>
+                ))}
+              </div>
             </div>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
               <div className="flex flex-col md:flex-row md:justify-between mb-3">
