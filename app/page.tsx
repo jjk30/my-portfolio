@@ -139,6 +139,32 @@ export default function Home() {
 
           <h2 className="text-2xl font-bold mb-8">Technical Skills</h2>
           <div className="grid md:grid-cols-2 gap-6">
+            {/* AI/ML & LLM */}
+            <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 md:col-span-2">
+              <h3 className="text-lg font-semibold mb-4">AI/ML & LLM</h3>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { name: "LangChain", icon: "/langchain.svg" },
+                  { name: "LangGraph", icon: "/langgraph.svg" },
+                  { name: "LangSmith", icon: "/langchain.svg" },
+                  { name: "NeMo Guardrails", icon: "/nvidia.svg" },
+                  { name: "Hugging Face", icon: "/huggingface.svg" },
+                  { name: "RAGAS", icon: "/ragas.svg" },
+                  { name: "FAISS", icon: "/meta.svg" },
+                  { name: "Model Context Protocol (MCP)", icon: "/mcp.svg" },
+                  { name: "Anthropic", icon: "/anthropic.svg" },
+                  { name: "OpenAI", icon: "/openai.svg" },
+                  { name: "Google Gemini", icon: "/gemini.svg" },
+                  { name: "NVIDIA NIM", icon: "/nvidia.svg" },
+                ].map((skill) => (
+                  <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
+                    <img src={skill.icon} alt={skill.name} className="w-5 h-5" />
+                    <span>{skill.name}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+
             {/* Languages */}
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4">Languages</h3>
@@ -175,6 +201,9 @@ export default function Home() {
                   { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
                   { name: "JUnit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/junit/junit-original.svg" },
                   { name: "OpenMP", icon: null },
+                  { name: "Vue 3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
+                  { name: "Electron", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" },
+                  { name: "pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
                 ].map((skill) => (
                   <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
                     {skill.icon && <img src={skill.icon} alt={skill.name} className="w-5 h-5" />}
@@ -216,6 +245,10 @@ export default function Home() {
                   { name: "Bazel", icon: "/bazel.svg" },
                   { name: "Linux/Ubuntu", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-original.svg" },
                   { name: "MQTT", icon: null },
+                  { name: "Terraform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
+                  { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg" },
+                  { name: "Prometheus", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" },
+                  { name: "Grafana", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" },
                 ].map((skill) => (
                   <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
                     {skill.icon && <img src={skill.icon} alt={skill.name} className="w-5 h-5" />}
@@ -368,6 +401,14 @@ export default function Home() {
                 tech: ["React", "AWS Lambda", "DynamoDB", "Firebase", "Docker"],
                 link: "https://www.sneakersforless.org",
                 github: "https://github.com/jjk30/sneakers-for-less",
+                live: true,
+              },
+              {
+                title: "slice – AI & Cloud Cost Gateway",
+                desc: "Self-hosted LLM gateway that routes, caches, and caps AI spend across Anthropic, OpenAI, Gemini, and NVIDIA NIM behind one endpoint. A LangGraph router with a LoRA fine-tuned Qwen2.5-0.5B classifier (92% routing accuracy) cut a 50-prompt workload's cost 45%, with a RAGAS LLM-as-a-judge confirming 0.89 relevancy. NeMo Guardrails, fail-open Redis/Postgres paths, 608 unit tests, Terraform to arm64 EC2 with Prometheus/Grafana, and a 7-tool MCP server for Claude Code.",
+                tech: ["Python", "FastAPI", "LangGraph", "Redis", "PostgreSQL", "Terraform", "Kubernetes", "AWS", "MCP"],
+                link: "https://sliceapp.dev/",
+                github: "https://github.com/jjk30/slice",
                 live: true,
               },
               {
