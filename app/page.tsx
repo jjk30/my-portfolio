@@ -145,8 +145,8 @@ export default function Home() {
               <div className="flex flex-wrap gap-3">
                 {[
                   { name: "LangChain", icon: "/langchain.svg" },
-                  { name: "LangGraph", icon: "/langgraph.svg" },
-                  { name: "LangSmith", icon: "/langchain.svg" },
+                  { name: "LangGraph", icon: "/langchain.svg" },
+                  { name: "LangSmith", icon: "/langsmith.svg" },
                   { name: "NeMo Guardrails", icon: "/nvidia.svg" },
                   { name: "Hugging Face", icon: "/huggingface.svg" },
                   { name: "RAGAS", icon: "/ragas.svg" },
