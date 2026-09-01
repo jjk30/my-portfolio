@@ -152,9 +152,9 @@ export default function Home() {
                   { name: "RAGAS", icon: "/ragas.svg" },
                   { name: "FAISS", icon: "/meta.svg" },
                   { name: "Model Context Protocol (MCP)", icon: "/mcp.svg" },
-                  { name: "Anthropic", icon: "/anthropic.svg" },
-                  { name: "OpenAI", icon: "/openai.svg" },
-                  { name: "Google Gemini", icon: "/gemini.svg" },
+                  { name: "Anthropic API", icon: "/anthropic.svg" },
+                  { name: "OpenAI API", icon: "/openai.svg" },
+                  { name: "Google Gemini API", icon: "/gemini.svg" },
                   { name: "NVIDIA NIM", icon: "/nvidia.svg" },
                 ].map((skill) => (
                   <span key={skill.name} className="px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-sm text-zinc-300 flex items-center gap-2">
