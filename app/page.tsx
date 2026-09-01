@@ -500,7 +500,15 @@ export default function Home() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
+            {([
+              {
+                title: "C++ Systems for Finance: Build a Trading Exchange from Scratch",
+                issuer: "Open Avenues Foundation — The Build Fellowship",
+                date: "August 2026",
+                desc: "8-week Build Project led by Yiwen Victor Song. Built a low-latency trading exchange from scratch in modern C++: price-time priority matching engine, pre-allocated memory pool, lock-free MPSC queue, and a live market data feed with client-side book rebuilding.",
+                link: "/build-fellowship-certificate.pdf",
+                linkText: "View Certificate →",
+              },
               {
                 title: "Building RAG Agents with LLMs",
                 issuer: "NVIDIA Deep Learning Institute",
@@ -537,17 +545,18 @@ export default function Home() {
                 desc: "Framework for effective and responsible AI collaboration, covering task delegation, prompt engineering, critically evaluating AI outputs, and diligent, ethical use across the 4D model.",
                 link: "https://verify.skilljar.com/c/nockqxzrfhy4",
               },
-            ].map((cert) => (
+            ] as { title: string; issuer: string; desc: string; link: string; date?: string; linkText?: string }[]).map((cert) => (
               <div key={cert.title} className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-lg font-medium">{cert.title}</h3>
                 </div>
                 <p className="text-cyan-400 text-sm mb-3">{cert.issuer}</p>
+                {cert.date && <p className="text-zinc-500 text-sm mb-3">{cert.date}</p>}
                 <p className="text-zinc-400 text-sm mb-4">{cert.desc}</p>
                 {cert.link && (
                   <div className="flex items-center gap-4">
                     <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-cyan-400 text-sm hover:underline">
-                      Verify Credential →
+                      {cert.linkText ?? "Verify Credential →"}
                     </a>
                   </div>
                 )}
