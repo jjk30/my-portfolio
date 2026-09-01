@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const RESUME_PATH = "/Jishnu_Janardanan_Resume.pdf";
+const RESUME_PATH = "/Jishnu_Janardanan_Resume.pdf?v=2026-09";
 
 export default function Resume() {
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
