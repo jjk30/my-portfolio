@@ -236,7 +236,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-4">Cloud & DevOps</h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { name: "AWS (Lambda, EC2, API Gateway, S3, CloudFront, SES, EventBridge, IAM, Bedrock)", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+                  { name: "AWS (Lambda, EC2, API Gateway, S3, CloudFront, SES, EventBridge, IAM, Bedrock)", icon: "/aws.svg" },
                   { name: "GCP (YouTube API, Firebase Auth)", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
                   { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
                   { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
