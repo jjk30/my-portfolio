@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-const RESUME_PATH = "/Jishnu_Janardanan_Resume.pdf?v=2026-09";
+import { RESUME_PATH } from "../data";
 
 export default function Resume() {
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
@@ -17,28 +16,28 @@ export default function Resume() {
 
   // Avoid a flash of the wrong layout before the screen size is known
   if (isMobile === null) {
-    return <main className="min-h-screen bg-zinc-950" />;
+    return <main className="min-h-dvh bg-page" />;
   }
 
   if (isMobile) {
     return (
-      <main className="min-h-screen bg-zinc-950 text-zinc-100 flex items-center justify-center px-6">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-2">Jishnu Janardanan</h1>
-          <p className="text-zinc-400 mb-8">Resume</p>
-          <div className="flex flex-col gap-4">
+      <main className="flex min-h-dvh items-center justify-center bg-page px-(--pad-x) text-ink">
+        <div className="w-full max-w-[320px] text-center">
+          <h1 className="mb-1 text-[30px] leading-[1.1] font-extrabold tracking-[-0.035em]">Jishnu Janardanan</h1>
+          <p className="mb-8 text-muted">Resume</p>
+          <div className="flex flex-col gap-3">
             <a
               href={RESUME_PATH}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
+              className="btn tap tap-solid justify-center bg-accent px-[26px] text-on-accent"
             >
               View Resume (PDF)
             </a>
             <a
               href={RESUME_PATH}
               download="Jishnu_Janardanan_Resume.pdf"
-              className="px-5 py-2.5 border border-zinc-700 hover:border-zinc-500 rounded-lg font-medium transition-colors"
+              className="btn tap tap-outline justify-center border border-line2 px-[26px]"
             >
               Download Resume
             </a>
@@ -49,8 +48,8 @@ export default function Resume() {
   }
 
   return (
-    <main className="h-screen bg-zinc-950">
-      <iframe src={RESUME_PATH} title="Jishnu Janardanan Resume" className="w-full h-full border-0" />
+    <main className="h-dvh bg-page">
+      <iframe src={RESUME_PATH} title="Jishnu Janardanan Resume" className="h-full w-full border-0" />
     </main>
   );
 }
