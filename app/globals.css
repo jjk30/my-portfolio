@@ -1,19 +1,410 @@
 @import "tailwindcss";
 
+/* The theme is a class on <html>, set before first paint by the inline script in layout.tsx. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Tokens (design-handoff/DESIGN.md) ---------- */
+
 :root {
-  --background: #09090b;
-  --foreground: #f4f4f5;
+  color-scheme: light;
+
+  --bg: #ffffff;
+  --alt: #f5f5f7;
+  --tile: #ffffff;
+  --soft: #f5f5f7;
+  --ink: #17171a;
+  --text: #2e2e33;
+  --muted: #5f5f66;
+  --tag: #46464d;
+  --line: #e3e3e8;
+  --line2: #c9c9d1;
+  --bar: rgba(255, 255, 255, 0.86);
+  --accent: #0a66d8;
+  --on-accent: #ffffff;
+  --live-bg: #e3f6ea;
+  --live-ink: #116b36;
+
+  /* Theme switch */
+  --knob: #ffffff;
+  --knob-x: 0px;
+  --sun: #b8690a;
+  --moon: #8a8a93;
+
+  /* Layout */
+  --pad-x: clamp(20px, 4vw, 40px);
+  --pad-y: clamp(40px, 4.4vw, 56px);
+  --nav-h: 104px; /* two-row header on small screens */
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-rise: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+html.dark {
+  color-scheme: dark;
+
+  --bg: #0b0b0d;
+  --alt: #111113;
+  --tile: #19191c;
+  --soft: #26262b;
+  --ink: #f5f5f7;
+  --text: #d4d4d8;
+  --muted: #a1a1aa;
+  --tag: #c9c9d1;
+  --line: #2c2c32;
+  --line2: #4a4a52;
+  --bar: rgba(11, 11, 13, 0.82);
+  --accent: #4da3ff;
+  --on-accent: #0b0b0d;
+  --live-bg: #12301f;
+  --live-ink: #7ee2a8;
+
+  --knob: #3a3a42;
+  --knob-x: 36px;
+  --sun: #8a8a93;
+  --moon: #f5f5f7;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-h: 60px; /* one-row header */
+  }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+
+  --color-page: var(--bg);
+  --color-alt: var(--alt);
+  --color-tile: var(--tile);
+  --color-soft: var(--soft);
+  --color-ink: var(--ink);
+  --color-body: var(--text);
+  --color-muted: var(--muted);
+  --color-tag: var(--tag);
+  --color-line: var(--line);
+  --color-line2: var(--line2);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-live-bg: var(--live-bg);
+  --color-live-ink: var(--live-ink);
+}
+
+/* ---------- Base ---------- */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+}
+
+section[id] {
+  scroll-margin-top: var(--nav-h);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Components ---------- */
+
+@layer components {
+  .wrap {
+    max-width: 1240px;
+    margin-inline: auto;
+    padding: var(--pad-y) var(--pad-x);
+  }
+
+  .h2 {
+    margin-bottom: 28px;
+    font-size: clamp(30px, 3.2vw, 40px);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+  }
+
+  /* Tile: sits on the alternate background, no border. */
+  .tile {
+    min-width: 0;
+    padding: 26px;
+    background: var(--tile);
+    border-radius: 24px;
+  }
+
+  /* Card: sits on the page background, outlined. */
+  .card {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 12px;
+    background: var(--soft);
+    border-radius: 12px;
+    font-size: 14.5px;
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  .tag {
+    padding: 4px 10px;
+    background: var(--soft);
+    border-radius: 8px;
+    color: var(--tag);
+    font-size: 12.5px;
+    font-weight: 500;
+  }
+
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    border-radius: 6px;
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+
+  /* Sticky nav: translucent bar, content scrolls underneath. */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bar);
+    border-bottom: 1px solid var(--line);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    backdrop-filter: saturate(180%) blur(16px);
+  }
+
+  /* One row of links. On small screens it scrolls sideways instead of hiding. */
+  .nav-links {
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    white-space: nowrap;
+    font-size: 14.5px;
+    font-weight: 500;
+    /* Second row, bleeding to the screen edges so links scroll off the side. */
+    order: 3;
+    flex: 0 0 calc(100% + 2 * var(--pad-x));
+    margin-inline: calc(-1 * var(--pad-x));
+    padding-inline: calc(var(--pad-x) - 13px);
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    min-height: 44px;
+    padding-inline: 13px;
+    border-radius: 8px;
+    color: var(--text);
+  }
+
+  .nav-link[aria-current] {
+    color: var(--accent);
+  }
+
+  /* Inset ring: the scroll container would clip one drawn outside the link. */
+  .nav-link:focus-visible {
+    outline-offset: -3px;
+  }
+
+  @media (min-width: 1024px) {
+    .nav-links {
+      order: 0;
+      flex: none;
+      overflow: visible;
+      margin-inline: -13px;
+      padding-inline: 0;
+    }
+  }
+
+  /* Theme switch */
+  .theme-switch {
+    position: relative;
+    display: inline-block;
+    flex: none;
+    width: 80px;
+    height: 44px;
+    padding: 0;
+    background: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .switch-knob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--knob);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+    transform: translateX(var(--knob-x));
+    transition:
+      transform 0.3s var(--ease-rise),
+      background-color 0.3s ease;
+  }
+
+  .switch-icon {
+    position: absolute;
+    top: 12px;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+  }
+
+  .switch-sun {
+    left: 12px;
+    color: var(--sun);
+  }
+
+  .switch-moon {
+    left: 48px;
+    color: var(--moon);
+  }
+
+  /* ---------- Hover and press ----------
+     Press feedback is on :active so it lands on pointer-down.
+     Hover is gated to real pointers so it never sticks after a tap. */
+  .tap {
+    --tap-scale: 0.97;
+    --tap-fade: 0.7;
+    transition:
+      transform 160ms var(--ease-out),
+      opacity 150ms ease,
+      background-color 150ms ease,
+      border-color 150ms ease;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .tap:active {
+    transform: scale(var(--tap-scale));
+  }
+
+  /* Filled button: a lighter fade keeps the label readable. */
+  .tap-solid {
+    --tap-fade: 0.88;
+  }
+
+  /* Large surfaces: a smaller scale reads the same as 0.97 does on a button. */
+  .tap-surface {
+    --tap-scale: 0.99;
+    --tap-fade: 0.85;
+  }
+
+  /* Outline buttons and the switch change their fill or border instead of fading. */
+  .tap-outline,
+  .tap-switch {
+    --tap-fade: 1;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .tap:hover {
+      opacity: var(--tap-fade);
+    }
+
+    .tap-outline:hover {
+      background-color: var(--soft);
+    }
+
+    .tap-switch:hover {
+      border-color: var(--line2);
+    }
+  }
+}
+
+/* ---------- Motion ---------- */
+
+/* Hero items fade up once on load. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.9s var(--ease-rise) both;
+}
+
+/* Theme change: colors fade for 0.3s. The class is on <html> only while the
+   theme is switching, so hover and press keep their own quick timing. */
+html.theme-fade,
+html.theme-fade *,
+html.theme-fade *::before,
+html.theme-fade *::after {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+html.theme-fade .switch-knob {
+  transition:
+    transform 0.3s var(--ease-rise),
+    background-color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .tap:active {
+    transform: none;
+  }
+}
+
+/* Solid bar for people who ask for less transparency. */
+@media (prefers-reduced-transparency: reduce) {
+  .site-header {
+    background: var(--bg);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
 }
