@@ -1,7 +1,7 @@
 // Solid dark marks: inverted in the dark theme.
 const MONO = new Set(["github", "anthropic", "openai", "mcp"]);
 // Marks with dark parts: given a small light backing in the dark theme.
-const BACKED = new Set(["bash", "pandas", "mqtt"]);
+const BACKED = new Set(["bash", "pandas", "mqtt", "mysql"]);
 // Marks whose owner supplies a separate dark-background file, saved as <name>-dark.svg.
 const THEMED = new Set(["langchain"]);
 
