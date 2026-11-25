@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Section from "./Section";
 
 export default function About() {
@@ -15,10 +16,26 @@ export default function About() {
         </div>
         <div className="min-w-0 flex-[1_1_360px]">
           <h3 className="mb-3 text-[18px] font-bold tracking-[-0.02em]">Education</h3>
-          <div className="rounded-[20px] bg-soft px-[22px] py-5">
-            <p className="font-bold">B.S. Computer Engineering</p>
-            <p className="font-semibold text-accent">Illinois Institute of Technology</p>
-            <p className="mt-1 text-[14.5px] text-muted">May 2026</p>
+          {/* The card is a size container: logo beside the text when there is room, above it when not. */}
+          <div className="@container rounded-[20px] bg-soft px-[22px] py-5">
+            <div className="flex flex-col items-start gap-4 @md:flex-row @md:items-center @md:gap-5">
+              {/* White in both themes: the logo's text is black. */}
+              <div className="flex-none rounded-xl bg-white p-3">
+                <Image
+                  src="/logos/illinois-tech.png"
+                  alt="Illinois Institute of Technology logo"
+                  width={690}
+                  height={300}
+                  unoptimized // serve the supplied file exactly as it is
+                  className="h-auto w-[140px]"
+                />
+              </div>
+              <div className="min-w-0">
+                <p className="font-bold">B.S. Computer Engineering</p>
+                <p className="font-semibold text-accent">Illinois Institute of Technology</p>
+                <p className="mt-1 text-[14.5px] text-muted">May 2026</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
