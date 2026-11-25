@@ -36,10 +36,7 @@ export default function Skills() {
       <div className="flex flex-wrap gap-5">
         {skillGroups.map((group) => (
           <div key={group.title} className={`tile ${group.wide ? "flex-[1_1_100%]" : "flex-[1_1_440px]"}`}>
-            <h3 className="mb-3.5 flex items-center gap-2.5 text-[18px] leading-[1.2] font-bold tracking-[-0.02em]">
-              {group.logo && <Logo name={group.logo} size="size-6" />}
-              {group.title}
-            </h3>
+            <h3 className="mb-3.5 text-[18px] leading-[1.2] font-bold tracking-[-0.02em]">{group.title}</h3>
             <div className="flex flex-wrap gap-2.5">
               {group.skills.map((skill) => (
                 <Badge key={skill.name} skill={skill} />
