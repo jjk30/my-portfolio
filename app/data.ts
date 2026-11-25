@@ -57,6 +57,8 @@ export type Skill = {
 
 export type SkillGroup = {
   title: string;
+  /** Logo shown next to the tile heading: a file name (without extension) in public/logos. */
+  logo?: string;
   /** Wide tiles take a full row; the others sit two per row. */
   wide: boolean;
   skills: Skill[];
@@ -129,10 +131,6 @@ export const skillGroups: SkillGroup[] = [
     title: "Cloud & DevOps",
     wide: false,
     skills: [
-      {
-        name: "AWS (Lambda, EC2, API Gateway, S3, CloudFront, SES, EventBridge, IAM, Bedrock)",
-        logo: "aws",
-      },
       { name: "GCP (YouTube API, Firebase Auth)", logo: "googlecloud" },
       { name: "Docker", logo: "docker" },
       { name: "Git", logo: "git" },
@@ -145,6 +143,32 @@ export const skillGroups: SkillGroup[] = [
       { name: "Prometheus", logo: "prometheus" },
       { name: "Grafana", logo: "grafana" },
     ],
+  },
+  {
+    title: "AWS",
+    logo: "aws",
+    wide: true,
+    skills: plain([
+      "Lambda",
+      "EC2",
+      "VPC",
+      "ECR",
+      "API Gateway",
+      "RDS",
+      "S3",
+      "CloudFront",
+      "SES",
+      "EventBridge",
+      "IAM",
+      "Secrets Manager",
+      "SSM",
+      "Route 53",
+      "CloudFormation",
+      "CloudShell",
+      "CloudWatch",
+      "Cost Explorer",
+      "Bedrock",
+    ]),
   },
   {
     title: "Distributed Systems & System Design",
